@@ -1,10 +1,21 @@
 <?xml version="1.0"?>
 
-<!-- OV-10 gunsight, by Dave Culp -->
+<!-- P-80 gunsight, by Dave Culp -->
 
 <PropertyList>
 
  <path>gunsight.ac</path>
+ 
+ <!-- rembrandt auto switching for glass -->
+  <effect>
+  <inherits-from>Effects/model-transparent</inherits-from>
+  <condition>
+    <property>sim/rendering/rembrandt/enabled</property>
+  </condition>
+    <object-name>noshadow.glass</object-name>
+  
+</effect>
+ 
 
  <animation>
   <type>material</type>
@@ -69,6 +80,23 @@
      </not>
     </condition>
  </animation>
+
+  <!-- Hot Spots -->
+  <animation>
+   <type>pick</type>
+   <object-name>switchbox</object-name>
+   <visible>true</visible>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <command>property-toggle</command>
+     <property>controls/armament/gunsight/power-on</property>
+    </binding>
+   </action>
+  </animation>
+
+
  <!-- *** LoD *** -->
  <animation>
   <type>range</type>

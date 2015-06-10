@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+  <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>100</max-m>
+    </animation>
+
+<!-- Front Panel hotspots -->
+ <panel>
+  <path>Aircraft/F80C/Models/panel-hotspots.xml</path>
+  <bottom-left>
+   <x-m>-1.53</x-m>
+   <y-m>-0.30</y-m>
+   <z-m>0.51</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>-1.53</x-m>
+   <y-m> 0.30</y-m>
+   <z-m>0.51</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>-1.53</x-m>
+   <y-m>-0.30</y-m>
+   <z-m> 0.90</z-m>
+  </top-left>
+ </panel>
+
+<!-- ******************** instruments *******************-->
+<model>
+  <path>Aircraft/P-80/Models/Instruments/RDMI/RDMI.xml</path>
+  <offsets>
+   <x-m>-1.53</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.74</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/P-80/Models/Instruments/ILS/ILS.xml</path>
+  <offsets>
+   <x-m>-1.532</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.67</z-m>
+  </offsets>
+ </model>
+ 
+  <model>
+  <path>Aircraft/P-80/Models/Instruments/Radar/Radar.xml</path>
+  <offsets>
+   <x-m>-1.541</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.53</z-m>
+    <pitch-deg> -25 </pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/RDMI/nav-select.xml</path>
+  <offsets>
+   <x-m>-1.545</x-m>
+   <y-m>-0.09</y-m>
+   <z-m> 0.615</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/P-80/Models/Instruments/AI/AI.xml</path>
+  <offsets>
+   <x-m>-1.53</x-m>
+   <y-m>0.08</y-m>
+   <z-m>0.745</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/n2/n2.xml</path>
+  <offsets>
+   <x-m>-1.53</x-m>
+   <y-m>0.16</y-m>
+   <z-m>0.75</z-m>
+  </offsets>
+ </model>
+ 
+ 
+ <model>
+  <path>Aircraft/P-80/Models/Instruments/EGT/EGT.xml</path>
+  <offsets>
+   <x-m>-1.535</x-m>
+   <y-m>0.16</y-m>
+   <z-m>0.686</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/P-80/Models/Instruments/FuelFlow/ff.xml</path>
+  <offsets>
+   <x-m>-1.532</x-m>
+   <y-m>0.16</y-m>
+   <z-m>0.62</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/P-80/Models/Instruments/AS/600/airspeed.xml</path>
+  <offsets>
+   <x-m>-1.53</x-m>
+   <y-m>-0.08</y-m>
+   <z-m>0.745</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/P-80/Models/Instruments/adf/rmi.xml</path>
+  <offsets>
+   <x-m>-1.53</x-m>
+   <y-m>-0.16</y-m>
+   <z-m>0.75</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/P-80/Models/Instruments/winter-ball/ball.xml</path>
+  <offsets>
+  <x-m>-1.53</x-m>
+   <y-m>-0.16</y-m>
+   <z-m> 0.675</z-m>
+  </offsets>
+ </model>
+ 
+  <model>
+  <path>Aircraft/P-80/Models/Instruments/ralt/ralt.xml</path>
+  <offsets>
+  <x-m>-1.53</x-m>
+   <y-m>-0.16</y-m>
+   <z-m> 0.605</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/P-80/Models/Instruments/Alt/version2/altimeter.xml</path>
+  <offsets>
+  <x-m>-1.53</x-m>
+   <y-m>-0.08</y-m>
+   <z-m> 0.67</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/P-80/Models/Instruments/IVSI/IVSI.xml</path>
+  <offsets>
+   <x-m>-1.538</x-m>
+   <y-m>0.08</y-m>
+   <z-m> 0.67</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/P-80/Models/Instruments/Flaps/flaps.xml</path>
+  <offsets>
+   <x-m>-1.54</x-m>
+   <y-m>-0.23</y-m>
+   <z-m>0.595</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/P-80/Models/Instruments/cit-warn/cit-warn.xml</path>
+  <offsets>
+   <x-m>-1.533</x-m>
+   <y-m>-0.23</y-m>
+   <z-m>0.72</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/P-80/Models/Instruments/can-warn/can-warn.xml</path>
+  <offsets>
+   <x-m>-1.555</x-m>
+   <y-m>0.23</y-m>
+   <z-m>0.68</z-m>
+  </offsets>
+ </model>
+ 
+  <model>
+  <path>Aircraft/P-80/Models/Instruments/fire-warn/fire-warn1.xml</path>
+  <offsets>
+   <x-m>-1.555</x-m>
+   <y-m>0.23</y-m>
+   <z-m>0.66</z-m>
+  </offsets>
+ </model>
+ 
+ 
+ 
+ 
+ <model>
+  <path>Aircraft/DavePack/Instruments/Gear/gear.xml</path>
+  <offsets>
+   <x-m>-1.549</x-m>
+   <y-m>-0.23</y-m>
+   <z-m>0.685</z-m>
+  </offsets>
+ </model>
+ 
+  <model>
+  <path>Aircraft/P-80/Models/Instruments/clock/chronograph.xml</path>
+  <offsets>
+   <x-m>-1.53</x-m>
+   <y-m>-0.23</y-m>
+   <z-m>0.635</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/Gear/park-brake-light.xml</path>
+  <offsets>
+   <x-m>-1.549</x-m>
+   <y-m>-0.259</y-m>
+   <z-m> 0.69</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/PanelLights/lights.xml</path>
+  <offsets>
+  <x-m>-1.545</x-m>
+   <y-m>0.09</y-m>
+   <z-m> 0.615</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/P-80/Models/Instruments/Fuel/fuel.xml</path>
+  <offsets>
+   <x-m>-1.546</x-m>
+   <y-m>0.16</y-m>
+   <z-m>0.55</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/P-80/Models/Instruments/Gunsight/gunsight.xml</path>
+  <offsets>
+   <x-m>-1.54</x-m>
+   <y-m>0</y-m>
+   <z-m>0.82</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/GMeter/gmeter.xml</path>
+  <offsets>
+   <x-m>-1.54</x-m>
+   <y-m>0.235</y-m>
+   <z-m>0.6</z-m>
+  </offsets>
+ </model>
+
+ 
+
+
+</PropertyList>
+
+

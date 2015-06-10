@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Default - USAF 25 FIS</name>
+     <texture-fuselage>Liveries/default/P80fuse.png</texture-fuselage>
+     <texture-lwing>Liveries/default/P80WLT.png</texture-lwing>
+	 <texture-rwing>Liveries/default/p80WRT.png</texture-rwing>
+	 <texture-tanks>Liveries/default/p80tank.png</texture-tanks>
+     
+    
+
+      </livery>
+    </model>
+  </sim>
+
+</PropertyList>

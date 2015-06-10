@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">USAF Flight Test Division</name>
+     <texture-fuselage>Liveries/USAFFTD/P80fuse.png</texture-fuselage>
+     <texture-lwing>Liveries/USAFFTD/P80WLT.png</texture-lwing>
+	 <texture-rwing>Liveries/USAFFTD/p80WRT.png</texture-rwing>
+	 <texture-tanks>Liveries/USAFFTD/p80tank.png</texture-tanks>
+     
+    
+
+      </livery>
+    </model>
+  </sim>
+
+</PropertyList>

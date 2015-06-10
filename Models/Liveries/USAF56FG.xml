@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">USAF 56 FG</name>
+     <texture-fuselage>Liveries/USAF56FG/P80fuse.png</texture-fuselage>
+     <texture-lwing>Liveries/USAF56FG/P80WLT.png</texture-lwing>
+	 <texture-rwing>Liveries/USAF56FG/p80WRT.png</texture-rwing>
+	 <texture-tanks>Liveries/USAF56FG/p80tank.png</texture-tanks>
+     
+    
+
+      </livery>
+    </model>
+  </sim>
+
+</PropertyList>

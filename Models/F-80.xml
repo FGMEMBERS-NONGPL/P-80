@@ -1,6 +1,6 @@
 <!-- A wrapper file for the F-80C 3D model -->
 
-<PropertyList>
+<PropertyList include="bombableinclude.xml">
 
  <path>f80.ac</path>
 
@@ -13,6 +13,15 @@
    <x-m>-1.53</x-m>
    <y-m>0.0</y-m>
    <z-m>0.64</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/RDMI/nav-select.xml</path>
+  <offsets>
+   <x-m>-1.53</x-m>
+   <y-m>-0.07</y-m>
+   <z-m> 0.64</z-m>
   </offsets>
  </model>
 
@@ -80,6 +89,15 @@
  </model>
 
  <model>
+  <path>Aircraft/DavePack/Instruments/Gear/park-brake-light.xml</path>
+  <offsets>
+   <x-m>-1.54</x-m>
+   <y-m>-0.24</y-m>
+   <z-m> 0.70</z-m>
+  </offsets>
+ </model>
+
+ <model>
   <path>Aircraft/DavePack/Instruments/PanelLights/lights.xml</path>
   <offsets>
    <x-m>-1.54</x-m>
@@ -116,7 +134,7 @@
  </model>
 
  <model>
-  <path>Aircraft/DavePack/Instruments/pilot/pilot-usaf.xml</path>
+  <path>Aircraft/P-80/Models/Instruments/pilot/pilot-usaf.xml</path>
   <offsets>
    <x-m>-1.07</x-m>
    <y-m>0</y-m>
@@ -152,12 +170,18 @@
      <object-name>RMainInnerDoor</object-name>
      <object-name>LMainInnerDoor</object-name>
      <object-name>VTail</object-name>
+     <object-name>RMainWheelDoor</object-name>
+     <object-name>RMainStrutDoor</object-name>
+     <object-name>LMainWheelDoor</object-name>
+     <object-name>LMainStrutDoor</object-name>
  </animation>
 
 
  <animation>
   <type>select</type>
-  <object-name>NGear</object-name>
+  <object-name>NGearTire</object-name>
+  <object-name>NGearStrutLower</object-name>
+  <object-name>NGearStrutUpper</object-name>
   <object-name>NGearLDoor</object-name>
   <object-name>NGearRDoor</object-name>
   <condition>
@@ -181,7 +205,9 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>NGear</object-name>
+  <object-name>NGearTire</object-name>
+  <object-name>NGearStrutLower</object-name>
+  <object-name>NGearStrutUpper</object-name>
   <object-name>NGearBrace</object-name>
   <property>gear/gear[0]/position-norm</property>
   <factor>-90</factor>
@@ -190,6 +216,42 @@
    <x-m>-3.05</x-m>
    <y-m>0</y-m>
    <z-m>-0.44</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <!-- Nose wheel steering -->
+ <animation>
+  <type>rotate</type>
+  <object-name>NGearStrutLower</object-name>
+  <object-name>NGearTire</object-name>
+  <property>sim/multiplay/generic/float[2]</property>
+  <factor>1</factor>
+  <center>
+   <x-m>-3.07</x-m>
+   <y-m> 0.0</y-m>
+   <z-m>-1.53</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>-1</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>NGearTire</object-name>
+  <property>fdm/jsbsim/gear/unit[0]/wheel-speed-fps</property>
+  <factor>10.6</factor>
+  <center>
+   <x-m>-3.0712</x-m>
+   <y-m>0</y-m>
+   <z-m>-1.5753</z-m>
   </center>
   <axis>
    <x>0</x>
@@ -243,6 +305,7 @@
  <animation>
   <type>select</type>
   <object-name>LMainGear</object-name>
+  <object-name>LMainTire</object-name>
   <object-name>LMainStrutDoor</object-name>
   <object-name>LMainWheelDoor</object-name>
   <object-name>LMainInnerDoor</object-name>
@@ -268,6 +331,7 @@
  <animation>
   <type>rotate</type>
   <object-name>LMainGear</object-name>
+  <object-name>LMainTire</object-name>
   <object-name>LMainStrutDoor</object-name>
   <object-name>LMainWheelDoor</object-name>
   <property>gear/gear[1]/position-norm</property>
@@ -313,6 +377,7 @@
  <animation>
   <type>select</type>
   <object-name>RMainGear</object-name>
+  <object-name>RMainTire</object-name>
   <object-name>RMainStrutDoor</object-name>
   <object-name>RMainWheelDoor</object-name>
   <object-name>RMainInnerDoor</object-name>
@@ -339,6 +404,7 @@
  <animation>
   <type>rotate</type>
   <object-name>RMainGear</object-name>
+  <object-name>RMainTire</object-name>
   <object-name>RMainStrutDoor</object-name>
   <object-name>RMainWheelDoor</object-name>
   <property>gear/gear[2]/position-norm</property>
@@ -379,6 +445,41 @@
    <z>0</z>
   </axis>
  </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>LMainTire</object-name>
+  <property>fdm/jsbsim/gear/unit[1]/wheel-speed-fps</property>
+  <factor>8.4</factor>
+  <center>
+   <x-m> 0.4641</x-m>
+   <y-m>-1.35</y-m>
+   <z-m>-1.3642</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>RMainTire</object-name>
+  <property>fdm/jsbsim/gear/unit[2]/wheel-speed-fps</property>
+  <factor>8.4</factor>
+  <center>
+   <x-m> 0.4641</x-m>
+   <y-m> 1.35</y-m>
+   <z-m>-1.3642</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
 
  <animation>
   <type>rotate</type>
@@ -541,5 +642,122 @@
   </condition>
  </animation>
 
+ <animation>
+   <type>translate</type>
+   <object-name>CanopyFrame</object-name>
+   <object-name>CanopyGlass</object-name>
+   <property>canopy/position-norm</property>
+   <factor>0.6</factor>
+   <axis>
+     <x>1</x>
+     <y>0</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <!-- Tip trails -->
+  <model>
+    <path>Aircraft/P-80/Models/effects/tiptrail/tiptrail.xml</path>
+    <offsets>
+      <x-m> 0.5 </x-m>
+      <y-m>  -6 </y-m>
+      <z-m> 0.25 </z-m>
+    </offsets>
+  </model>
+  
+  
+  <model>
+    <path>Aircraft/P-80/Models/effects/tiptrail/tiptrail.xml</path>
+    <offsets>
+      <x-m> 0.5 </x-m>
+      <y-m>  6 </y-m>
+      <z-m> 0.25 </z-m>
+    </offsets>
+  </model>
+  
+  
+  <!-- Les flammes -->
+  <!-- Gauche -->
+  <model>
+    <path>Aircraft/P-80/Models/effects/flammes/flammesG.xml</path>
+    <offsets>
+      <x-m>  5.55 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </offsets>
+  </model>
+  
+  
+ 
+  <!-- Particules OSG -->
+  <!--smoke -->
+  <model>
+    <path>Aircraft/P-80/Models/effects/trailL.xml</path>
+    <offsets>
+     <x-m>  6.55 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/P-80/Models/effects/smoke/smokeL.xml</path>
+    <offsets>
+     <x-m>  6.55 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Guns -->
+  
+  <model>
+    <path>Aircraft/P-80/Models/effects/guns/fire.xml</path>
+    <offsets>
+      <x-m> -2.1 </x-m>
+      <y-m> -0.3 </y-m>
+      <z-m> -0.27 </z-m>
+	  <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+
+ 
+  <model>
+    <path>Aircraft/P-80/Models/effects/guns/fire.xml</path>
+    <offsets>
+      <x-m> -2.1 </x-m>
+      <y-m>  0.3 </y-m>
+      <z-m> -0.27 </z-m>
+	  <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+  
+  
+  <model>
+    <path>Aircraft/P-80/Models/effects/guns/fire.xml</path>
+    <offsets>
+       <x-m> -2.3 </x-m>
+      <y-m> -0.15 </y-m>
+      <z-m> -0.27 </z-m>
+	  <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+
+  
+  <model>
+    <path>Aircraft/P-80/Models/effects/guns/fire.xml</path>
+    <offsets>
+       <x-m> -2.3 </x-m>
+      <y-m>  0.15</y-m>
+      <z-m> -0.27 </z-m>
+	  <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+  
 </PropertyList>
+ 
+ 
  

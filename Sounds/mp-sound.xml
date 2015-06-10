@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<fx>
+
+<!-- External Sounds -->
+ 
+<engine>
+      <name>engine-start-outside</name>
+      <mode>once</mode>
+      <path>Aircraft/P-80/Sounds/p80-startup.wav</path>
+     <condition>
+<and>
+ <less-than>
+                <property>velocities/groundspeed-kt</property>
+                <value>1</value>
+            </less-than>
+<greater-than>  
+   <property>engines/engine[0]/rpm</property>
+   <value>0.5</value>
+   
+  </greater-than>
+  
+  <not>
+   <property>/sim/current-view/internal</property>
+  </not>
+</and>
+</condition>
+      <volume>
+        <property>engines/engine[0]/n2</property>
+        <factor> 0.09 </factor>
+        <min> 0.3 </min>
+        <max> 0.9 </max>
+      </volume>
+      <pitch>
+        <property>engines/engine[0]/n2</property>
+        <factor> 0.01 </factor>
+	<min> 0.0 </min>
+	<max> 0.9 </max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+  <engine>
+      <name>turbine1</name>
+      <mode>looped</mode>
+      <path>Aircraft/P-80/Sounds/p80-whine.wav</path>
+      <condition>
+        <property>engines/engine/running</property>
+        <not>
+          <property>sim/current-view/internal</property>
+        </not>
+      </condition>
+      <orientation>
+        <x>   0 </x>
+        <y>   0 </y>
+        <z> 180 </z>
+        <inner-cone> 180.0 </inner-cone>
+        <outer-cone> 360.0 </outer-cone>
+        <outer-gain>   0.2 </outer-gain>
+      </orientation>
+      <volume>
+        <property>engines/engine/n2</property>
+        <factor>0.09</factor>
+        <min>0.3</min>
+        <max>0.9</max>
+      </volume>
+      <pitch>
+        <property>engines/engine/n2</property>
+        <factor>0.01</factor>
+	<min>0</min>
+	<max>0.9</max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+ 
+ 
+
+  <engine>
+   <name>engine1</name>
+   <mode>looped</mode>
+   <path>Aircraft/DavePack/Sounds/milpower.wav</path>
+   <condition>
+    <property>engines/engine[0]/running</property>
+    <not>
+      <property>sim/current-view/internal</property>
+    </not>
+   </condition>
+   <orientation>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>180.0</z>
+    <inner-cone>180.0</inner-cone>
+    <outer-cone>360.0</outer-cone>
+    <outer-gain>0.2</outer-gain>
+   </orientation>
+   <volume>
+    <property>/controls/engines/engine[0]/throttle</property>
+    <factor>0.5</factor>
+    <min>0.1</min>
+    <max>0.5</max>
+   </volume>
+  </engine>
+  
+  <engine>
+   <name>compressor whine</name>
+   <path>Sounds/turbojet_fan.wav</path>
+   <mode>looped</mode>
+   <condition>
+    <not>
+     <property>sim/current-view/internal</property>
+    </not>
+    <property>engines/engine[0]/running</property>
+   </condition>
+   <orientation>
+    <x> 0.0</x>
+    <y> 0.0</y>
+    <z> 180.0</z>
+    <inner-cone>50.0</inner-cone>
+    <outer-cone>180.0</outer-cone>
+    <outer-gain>0.5</outer-gain>
+   </orientation>
+   <pitch>
+    <property>engines/engine[0]/n1</property>
+    <offset>0.7</offset>
+    <factor>.003</factor>
+   </pitch>
+   <volume>
+    <property>engines/engine[0]/n1</property>
+    <offset>0.15</offset>
+    <factor>-0.003</factor>
+    <min>0.05</min>
+    <max>0.15</max>
+   </volume>
+  </engine>
+  
+  <engine>
+      <name>engine</name>
+      <path>Aircraft/P-80/Sounds/jet-blast.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[0]/running</property>
+		<not>
+        	<property>sim/current-view/internal</property>
+		
+     	</not>
+      </condition>
+       <position>
+    <x>18.6</x>
+	<y>-0.4</y>
+	<z>2.37</z>
+   </position>
+   <orientation>
+	<x>1.0</x>
+    <y>0.0</y>
+    <z>0</z>
+    <inner-angle>35.0</inner-angle>
+    <outer-angle>90</outer-angle>
+    <outer-gain>0.45</outer-gain>
+   </orientation>
+ 
+   <volume>
+    <property>engines/engine[0]/n1</property>
+    <factor>0.014</factor>
+    <offset>-0.45</offset>
+   </volume>
+ 
+   <reference-dist>20</reference-dist>
+   <max-dist>3000</max-dist>
+    </engine>
+  
+   <gun>
+      <name>Gun up left</name>
+      <mode>looped</mode>
+      <path>Aircraft/P-80/Sounds/gunfire.wav</path>
+      <condition>
+        <and>
+          <property>controls/armament/trigger</property>
+          <property>ai/submodels/submodel[0]/count</property>
+        </and>
+      </condition>
+      <position>
+        <x> -5.363 </x>
+        <y> -0.125 </y>
+        <z>  0.414 </z>
+      </position>
+      <reference-dist>100</reference-dist>
+      <max-dist>500</max-dist>
+    </gun>
+
+    <gun>
+      <name>Gun up right</name>
+      <mode>looped</mode>
+      <path>Aircraft/P-80/Sounds/gunfire.wav</path>
+      <condition>
+        <and>
+          <property>controls/armament/trigger</property>
+          <property>ai/submodels/submodel[0]/count</property>
+        </and>
+      </condition>
+      <position>
+        <x> -5.363 </x>
+        <y>  0.125 </y>
+        <z>  0.414 </z>
+      </position>
+      <reference-dist>100</reference-dist>
+      <max-dist>500</max-dist>
+    </gun>
+
+    <gun>
+      <name>Gun down left</name>
+      <mode>looped</mode>
+      <path>Aircraft/P-80/Sounds/gunfire.wav</path>
+      <condition>
+        <and>
+          <property>controls/armament/trigger</property>
+          <property>ai/submodels/submodel[0]/count</property>
+        </and>
+      </condition>
+      <position>
+        <x> -5.084 </x>
+        <y> -0.306 </y>
+        <z>  0.237 </z>
+      </position>
+      <reference-dist>100</reference-dist>
+      <max-dist>500</max-dist>
+    </gun>
+
+    <gun>
+      <name>Gun down left</name>
+      <mode>looped</mode>
+      <path>Aircraft/P-80/Sounds/gunfire.wav</path>
+      <condition>
+        <and>
+          <property>controls/armament/trigger</property>
+          <property>ai/submodels/submodel[0]/count</property>
+        </and>
+      </condition>
+      <position>
+        <x> -5.084 </x>
+        <y>  0.306 </y>
+        <z>  0.237 </z>
+      </position>
+      <reference-dist>100</reference-dist>
+      <max-dist>500</max-dist>
+    </gun>
+
+	
+	<squeal>
+   <name>squeal</name>
+   <path>Sounds/squeal.wav</path>
+   <condition>
+    <or>
+     <property>gear/gear[0]/wow</property>
+     <property>gear/gear[1]/wow</property>
+     <property>gear/gear[2]/wow</property>
+    </or>
+   </condition>
+   <volume>
+    <property>velocities/speed-down-fps</property>
+    <factor>0.05</factor>
+   </volume>
+   <volume>
+    <property>/velocities/airspeed-kt</property>
+    <factor>0.01</factor>
+   </volume>
+   <volume>
+    <internal>dt_stop</internal>
+    <factor>0.05</factor>
+    <max>1.0</max>
+   </volume>
+   <pitch>
+    <property>/velocities/airspeed-kt</property>
+    <factor>0.0025</factor>
+    <offset>1.2</offset>
+   </pitch>
+  </squeal>
+  
+	
+	</fx>
+
+</PropertyList>
